@@ -1,10 +1,10 @@
 class Solution {
     public int[] getConcatenation(int[] nums) {
-        int n = nums.length;
-        int[] ans = new int[2 * n];
+        
+        int[] ans = new int[nums.length * 2];
 
-        for(int i = 0; i <= 2*n - 1; i++){
-            ans[i] = nums[i % n];   
+        for(int i = 0; i < ans.length; i++){
+            ans[i] = nums[i % nums.length];   
         }
         return ans;
     }
